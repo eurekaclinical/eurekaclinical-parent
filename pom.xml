@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eurekaclinical</groupId>
     <artifactId>eurekaclinical-parent</artifactId>
-    <version>1-Alpha-2-SNAPSHOT</version>
+    <version>1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Eureka! Clinical Parent</name>
     <inceptionYear>2010</inceptionYear>
