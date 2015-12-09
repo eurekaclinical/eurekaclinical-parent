@@ -33,16 +33,17 @@
         <tag>HEAD</tag>
     </scm>
     
+    <!-- Both repositories are password protected for deploys. -->
     <distributionManagement>
         <repository>
-            <id>aiw</id>
-            <name>AIW Repo</name>
+            <id>OSSRH</id>
+            <name>Open Source Project Repository Hosting</name>
             <url>http://maven.cci.emory.edu/nexus/content/repositories/aiw/</url>
         </repository>
         <snapshotRepository>
-            <id>aiw-snapshots</id>
-            <name>AIW Snapshots Repo</name>
-            <url>http://maven.cci.emory.edu/nexus/content/repositories/aiw-snapshots/</url>
+            <id>OSSRH-SNAPSHOTS</id>
+            <name>Open Source Project Repository Hosting (Snapshots)</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
     
@@ -219,6 +220,29 @@
                             </goals>
                         </execution>
                     </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>2.6</version>
+                </plugin>
+                <plugin>
+                    <groupId>net.alchim31.maven</groupId>
+                    <artifactId>yuicompressor-maven-plugin</artifactId>
+                    <version>1.5.1</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>compress</goal>
+                            </goals>
+                        </execution>
+                    </executions>  
+                    <configuration>
+                        <suffix>${maven.build.timestamp}</suffix>
+                        <includes>
+                            <include>assets/css/eureka.css</include>
+                        </includes>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
