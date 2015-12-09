@@ -38,7 +38,7 @@
         <repository>
             <id>OSSRH</id>
             <name>Open Source Project Repository Hosting</name>
-            <url>http://maven.cci.emory.edu/nexus/content/repositories/aiw/</url>
+            <url>https://oss.sonatype.org/content/repositories/releases</url>
         </repository>
         <snapshotRepository>
             <id>OSSRH-SNAPSHOTS</id>
