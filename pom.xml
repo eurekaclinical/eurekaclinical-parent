@@ -20,6 +20,11 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Don't upgrade h2 yet. There is a bug causing ORDER BY to be 
+        ignored in SELECT queries with a WHERE clause. -->
+        <h2-version>1.4.185</h2-version>
+        <postgresql-version>9.4-1201-jdbc41</postgresql-version>
+        <oracle-version>12.1.2-0-0</oracle-version>
     </properties>
     
     <organization>
@@ -47,9 +52,9 @@
     </distributionManagement>
     <repositories>
         <repository>
-            <id>oracleReleases</id>
-            <name>Oracle Released Java Packages</name>
-            <url>http://download.oracle.com/maven</url>
+            <id>java.net-Public</id>
+            <name>Maven Java Net Snapshots and Releases</name>
+            <url>https://maven.java.net/content/groups/public/</url>
             <layout>default</layout>
         </repository>
         <repository>
@@ -57,17 +62,28 @@
             <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
         </repository>
         <repository>
-            <id>m2.java.net</id>
-            <name>Java.net Maven 2 Repository</name>
-            <url>http://download.java.net/maven/2</url>
+            <id>oracleReleases</id>
+            <name>Oracle Released Java Packages</name>
+            <url>http://download.oracle.com/maven</url>
+            <layout>default</layout>
+        </repository>
+        <repository>
+            <id>maven.oracle.com</id>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <url>https://maven.oracle.com</url>
             <layout>default</layout>
         </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
-            <id>m2.java.net</id>
-            <name>Java.net Maven 2 Repository</name>
-            <url>http://download.java.net/maven/2</url>
+            <id>java.net-Public</id>
+            <name>Maven Java Net Snapshots and Releases</name>
+            <url>https://maven.java.net/content/groups/public/</url>
             <layout>default</layout>
         </pluginRepository>
     </pluginRepositories>
@@ -166,12 +182,10 @@
                 <artifactId>opencsv</artifactId>
                 <version>2.3</version>
             </dependency>
-            <!-- Don't upgrade h2 yet. There is a bug causing ORDER BY to be 
-            ignored in SELECT queries with a WHERE clause. -->
             <dependency>
                 <groupId>com.h2database</groupId>
                 <artifactId>h2</artifactId>
-                <version>1.4.185</version>
+                <version>${h2-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.ini4j</groupId>
@@ -214,10 +228,31 @@
                 <version>1.7.13</version>
             </dependency>
             <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.37</version>
-                <scope>test</scope>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql-version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.oracle.weblogic</groupId>
+                <artifactId>ojdbc6</artifactId>
+                <version>${oracle-version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>1.5.4</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>1.1</version>
+            </dependency>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.17</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -268,6 +303,28 @@
                             <include>assets/css/eureka.css</include>
                         </includes>
                     </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>sql-maven-plugin</artifactId>
+                    <dependencies>
+                        <dependency>
+                            <groupId>com.h2database</groupId>
+                            <artifactId>h2</artifactId>
+                            <version>${h2-version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.postgresql</groupId>
+                            <artifactId>postgresql</artifactId>
+                            <version>${postgresql-version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>com.oracle.weblogic</groupId>
+                            <artifactId>ojdbc6</artifactId>
+                            <version>${oracle-version}</version>
+                            <scope>compile</scope>
+                        </dependency>
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>
