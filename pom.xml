@@ -349,7 +349,7 @@
                 <plugin>
                     <groupId>org.liquibase</groupId>
                     <artifactId>liquibase-maven-plugin</artifactId>
-                    <version>3.3.2</version>
+                    <version>3.4.2</version>
                     <dependencies>
                         <dependency>
                             <groupId>com.h2database</groupId>
