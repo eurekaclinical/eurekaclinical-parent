@@ -23,8 +23,6 @@
         <!-- Don't upgrade h2 yet. There is a bug causing ORDER BY to be 
         ignored in SELECT queries with a WHERE clause. -->
         <h2-version>1.4.185</h2-version>
-        <postgresql-version>9.4-1201-jdbc41</postgresql-version>
-        <oracle-version>12.1.2-0-0</oracle-version>
         <javamail-version>1.5.4</javamail-version>
         <commons-logging-version>1.1</commons-logging-version>
         <log4j-version>1.2.17</log4j-version>
@@ -253,18 +251,6 @@
                 <version>1.7.13</version>
             </dependency>
             <dependency>
-                <groupId>org.postgresql</groupId>
-                <artifactId>postgresql</artifactId>
-                <version>${postgresql-version}</version>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.oracle.weblogic</groupId>
-                <artifactId>ojdbc6</artifactId>
-                <version>${oracle-version}</version>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
                 <groupId>com.sun.mail</groupId>
                 <artifactId>javax.mail</artifactId>
                 <version>${javamail-version}</version>
@@ -337,21 +323,12 @@
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>sql-maven-plugin</artifactId>
+                    <version>1.5</version>
                     <dependencies>
                         <dependency>
                             <groupId>com.h2database</groupId>
                             <artifactId>h2</artifactId>
                             <version>${h2-version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.postgresql</groupId>
-                            <artifactId>postgresql</artifactId>
-                            <version>${postgresql-version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>com.oracle.weblogic</groupId>
-                            <artifactId>ojdbc6</artifactId>
-                            <version>${oracle-version}</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -364,16 +341,6 @@
                             <groupId>com.h2database</groupId>
                             <artifactId>h2</artifactId>
                             <version>${h2-version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.postgresql</groupId>
-                            <artifactId>postgresql</artifactId>
-                            <version>${postgresql-version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>com.oracle.weblogic</groupId>
-                            <artifactId>ojdbc6</artifactId>
-                            <version>${oracle-version}</version>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -392,16 +359,6 @@
                                     <artifactId>servlet-api</artifactId>
                                 </exclusion>
                             </exclusions>
-                        </dependency>
-                        <dependency>
-                            <groupId>org.postgresql</groupId>
-                            <artifactId>postgresql</artifactId>
-                            <version>${postgresql-version}</version>
-                        </dependency>
-                        <dependency>
-                            <groupId>com.oracle.weblogic</groupId>
-                            <artifactId>ojdbc6</artifactId>
-                            <version>${oracle-version}</version>
                         </dependency>
                         <dependency>
                             <groupId>com.sun.mail</groupId>
@@ -429,6 +386,11 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.2</version>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
