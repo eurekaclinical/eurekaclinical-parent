@@ -21,6 +21,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <liquibase-version>3.4.2</liquibase-version>
+        <!-- Don't upgrade h2 yet. There is a bug causing ORDER BY to be 
+        ignored in SELECT queries with a WHERE clause. -->
+        <h2-version>1.4.185</h2-version>
     </properties>
     
     <organization>
@@ -215,6 +218,10 @@
                     <groupId>org.liquibase</groupId>
                     <artifactId>liquibase-maven-plugin</artifactId>
                     <version>${liquibase-version}</version>
+                    <configuration>
+                        <logging>WARNING</logging>
+                        <outputFileEncoding>${project.build.sourceEncoding}</outputFileEncoding>
+                    </configuration>
                     <dependencies>
                         <dependency>
                             <groupId>com.h2database</groupId>
