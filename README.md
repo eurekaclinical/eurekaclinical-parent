@@ -60,7 +60,7 @@ Because this pom adds Oracle's maven repository, you need to create yourself an 
 
 
 ### Maven Central
-To make release to Maven Central work, you need to configure your maven environment as follows:
+The Eureka! Clinical project releases its artifacts to Maven Central. If you are authorized to release projects for Eureka! Clinical, you need to configure your maven environment as follows:
 1) Install and configure Gnu Privacy Guard (GPG) on your workstation.
 2) Create a server profile in `~/.m2/settings.xml` with your Maven Central credentials as follows:
 ```
