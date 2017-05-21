@@ -13,7 +13,20 @@ It is the parent pom used by all projects in the eurekaclinical organization. It
 * default plugin dependencies
 * setup to use Maven Central
 
-## Oracle's maven repsitory
+## Version history
+### Version 1
+
+## Specifying this pom as a parent
+```
+<parent>
+    <groupId>org.eurekaclinical</groupId>
+    <artifactId>eurekaclinical-parent</artifactId>
+    <version>version</version>
+</parent>
+```
+
+## Additional configuration
+### Oracle's maven repsitory
 Because this pom adds Oracle's maven repository, you need to create yourself an Oracle.com developer account, and add the following to your `$HOME/.m2/settings.xml`:
 
 ```
@@ -46,7 +59,7 @@ Because this pom adds Oracle's maven repository, you need to create yourself an 
 
 
 
-## Maven Central
+### Maven Central
 To make release to Maven Central work, you need to configure your maven environment as follows:
 1) Install and configure Gnu Privacy Guard (GPG) on your workstation.
 2) Create a server profile in `~/.m2/settings.xml` with your Maven Central credentials as follows:
@@ -69,18 +82,6 @@ To make release to Maven Central work, you need to configure your maven environm
         <gpg.passphrase>your passphrase</gpg.passphrase>
     </properties>
 </profile>
-```
-
-## Version history
-### Version 1
-
-## Specifying this pom as a parent
-```
-<parent>
-    <groupId>org.eurekaclinical</groupId>
-    <artifactId>eurekaclinical-parent</artifactId>
-    <version>version</version>
-</parent>
 ```
 
 ## Getting help
