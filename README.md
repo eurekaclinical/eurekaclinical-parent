@@ -13,6 +13,40 @@ It is the parent pom used by all projects in the eurekaclinical organization. It
 * default plugin dependencies
 * setup to use Maven Central
 
+## Oracle's maven repsitory
+Because this pom adds Oracle's maven repository, you need to create yourself an Oracle.com developer account, and add the following to your `$HOME/.m2/settings.xml`:
+
+```
+<servers>
+...
+        <server>
+            <id>maven.oracle.com</id>
+            <username>Oracle.com username</username>
+            <password>Oracle.com password</password>
+            <configuration>
+                <basicAuthScope>
+                    <host>ANY</host>
+                    <port>ANY</port>
+                    <realm>OAM 11g</realm>
+                </basicAuthScope>
+                <httpConfiguration>
+                    <all>
+                        <params>
+                            <property>
+                                <name>http.protocol.allow-circular-redirects</name>
+                                <value>%b,true</value>
+                            </property>
+                        </params>
+                    </all>
+                </httpConfiguration>
+            </configuration>
+        </server>
+</servers>
+```
+
+
+
+## Maven Central
 To make release to Maven Central work, you need to configure your maven environment as follows:
 1) Install and configure Gnu Privacy Guard (GPG) on your workstation.
 2) Create a server profile in `~/.m2/settings.xml` with your Maven Central credentials as follows:
