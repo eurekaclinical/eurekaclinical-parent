@@ -13,6 +13,30 @@ It is the parent pom used by all projects in the eurekaclinical organization. It
 * default plugin dependencies
 * setup to use Maven Central
 
+To make release to Maven Central work, you need to configure your maven environment as follows:
+1) Install and configure Gnu Privacy Guard (GPG) on your workstation.
+2) Create a server profile in `~/.m2/settings.xml` with your Maven Central credentials as follows:
+```
+<server>
+    <id>ossrh</id>
+    <username>your username</username>
+    <password>you password</password>
+</server>
+```
+3) Create a profile in `~/.m2/settings.xml` with your GPG credentials as follows:
+```
+<profile>
+    <id>ossrh</id>
+    <activation>
+        <activeByDefault>true</activeByDefault>
+    </activation>
+    <properties>
+        <gpg.executable>gpg</gpg.executable>
+        <gpg.passphrase>your passphrase</gpg.passphrase>
+    </properties>
+</profile>
+```
+
 ## Version history
 ### Version 1
 
