@@ -60,23 +60,6 @@
             <id>jboss-releases</id>
             <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
         </repository>
-        <repository>
-            <id>oracleReleases</id>
-            <name>Oracle Released Java Packages</name>
-            <url>http://download.oracle.com/maven</url>
-            <layout>default</layout>
-        </repository>
-        <repository>
-            <id>maven.oracle.com</id>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <url>https://maven.oracle.com</url>
-            <layout>default</layout>
-        </repository>
     </repositories>
     <pluginRepositories>
         <pluginRepository>
@@ -88,23 +71,6 @@
         <pluginRepository>
             <id>jboss-releases</id>
             <url>https://repository.jboss.org/nexus/content/repositories/releases/</url>
-        </pluginRepository>
-        <pluginRepository>
-            <id>oracleReleases</id>
-            <name>Oracle Released Java Packages</name>
-            <url>http://download.oracle.com/maven</url>
-            <layout>default</layout>
-        </pluginRepository>
-        <pluginRepository>
-            <id>maven.oracle.com</id>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <url>https://maven.oracle.com</url>
-            <layout>default</layout>
         </pluginRepository>
     </pluginRepositories>
     
