@@ -93,17 +93,6 @@
             </organization>
         </developer>
         <developer>
-            <id>akalsan</id>
-            <name>Akshatha Kalsanka Pai</name>
-            <email>akalsan@emory.edu</email>
-            <roles>
-                <role>Systems Software Engineer</role>
-            </roles>
-            <organization>
-                Department of Biomedical Informatics, Emory University
-            </organization>
-        </developer>
-        <developer>
             <id>mai</id>
             <name>Miao Ai</name>
             <email>miao.ai@emory.edu</email>
@@ -115,11 +104,11 @@
             </organization>
         </developer>
         <developer>
-            <id>richard.willard</id>
-            <name>Richie Willard</name>
-            <email>richard.willard@emoryhealthcare.org</email>
+            <id>nita.deshpande</id>
+            <name>Nita Deshpande</name>
+            <email>nita.deshpande@emory.edu</email>
             <roles>
-                <role>Project Manager</role>
+                <role>Senior Systems Software Engineer</role>
             </roles>
             <organization>
                 Department of Biomedical Informatics, Emory University
