@@ -26,38 +26,9 @@ It is the parent pom used by all projects in the eurekaclinical organization. It
 ```
 
 ## Additional configuration
-### Oracle's maven repsitory
-Because this pom adds Oracle's maven repository, you need to create yourself an Oracle.com developer account, and add the following to your `$HOME/.m2/settings.xml`:
-
-```
-<servers>
-...
-        <server>
-            <id>maven.oracle.com</id>
-            <username>Oracle.com username</username>
-            <password>Oracle.com password</password>
-            <configuration>
-                <basicAuthScope>
-                    <host>ANY</host>
-                    <port>ANY</port>
-                    <realm>OAM 11g</realm>
-                </basicAuthScope>
-                <httpConfiguration>
-                    <all>
-                        <params>
-                            <property>
-                                <name>http.protocol.allow-circular-redirects</name>
-                                <value>%b,true</value>
-                            </property>
-                        </params>
-                    </all>
-                </httpConfiguration>
-            </configuration>
-        </server>
-</servers>
-```
-
-
+The `stage-production` profile sets the `eurekaclinical.stage` property to `PRODUCTION`. This
+property is a convention that eurekaclinical components use to change configuration in
+production settings.
 
 ### Maven Central
 The Eureka! Clinical project releases its artifacts to Maven Central. If you are authorized to release projects for Eureka! Clinical, you need to configure your maven environment as follows:
