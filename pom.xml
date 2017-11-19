@@ -422,5 +422,11 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>stage-production</id>
+            <properties>
+                <eurekaclinical.stage>PRODUCTION</eurekaclinical.stage>
+            </properties>
+        </profile>
     </profiles>
 </project>
