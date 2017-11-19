@@ -19,6 +19,7 @@
     </licenses>
     
     <properties>
+        <eurekaclinical.stage>DEVELOPMENT</eurekaclinical.stage>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <liquibase-version>3.4.2</liquibase-version>
         <!-- Don't upgrade h2 yet. There is a bug causing ORDER BY to be 
