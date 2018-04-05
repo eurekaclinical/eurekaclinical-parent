@@ -642,5 +642,39 @@
                 </plugins>
             </build>
         </profile>
+        <profile>
+            <id>docker</id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>com.spotify</groupId>
+                            <artifactId>dockerfile-maven-plugin</artifactId>
+                            <version>1.3.7</version>
+                            <executions>
+                                <execution>
+                                    <id>default</id>
+                                    <goals>
+                                        <!--
+                                            bind:  mojo "build" is bound to "package" phase
+                                            docker-hub:  "mvn dockerfile:push" to deploy
+                                        -->
+                                        <goal>build</goal>
+                                    </goals>
+                                </execution>
+                            </executions>
+                            <configuration>
+                                <buildArgs>
+                                    <IMAGE_VERSION>0.0.1</IMAGE_VERSION>
+                                </buildArgs>
+                                <repository>ihawke/test</repository>
+                                <tag>latest</tag>
+                                <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
     </profiles>
 </project>
