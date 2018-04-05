@@ -59,9 +59,13 @@ tomcat `logs` directory.
 * `tomcat-server-config/localhost.truststore`: the same SSL certificate, in order for warfiles to trust it.
 
 In your profile, optionally create a `dependencies` section with any additional 
-warfiles that you wish to run. Your project's warfile will be deployed
-automatically. Also, you may specify additional plugins to 
-prepare the above configuration files, populate databases, and more. Their
+warfiles that you wish to run. 
+
+In the cargo plugin's `deployables` section, add a `deployable` tag for the current project's
+warfile with a `location` tag pointing to the path of the built warfile. Add any additional warfiles
+that you want to deploy to the `deployables`. 
+
+You may specify additional plugins to prepare the above configuration files, populate databases, and more. Their
 executions should operate in the `process-resources` or earlier build phases.
 
 ### Maven Central

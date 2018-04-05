@@ -268,21 +268,6 @@
                             <deployable>
                                 <location>${project.build.directory}/${project.build.finalName}.${project.packaging}</location>
                             </deployable>
-                            <deployable>
-                                <groupId>org.eurekaclinical</groupId>
-                                <artifactId>cas-mock</artifactId>
-                                <type>war</type>
-                            </deployable>
-                            <deployable>
-                                <groupId>org.eurekaclinical</groupId>
-                                <artifactId>eurekaclinical-user-service</artifactId>
-                                <type>war</type>
-                            </deployable>
-                            <deployable>
-                                <groupId>org.eurekaclinical</groupId>
-                                <artifactId>eurekaclinical-registry-service</artifactId>
-                                <type>war</type>
-                            </deployable>
                         </deployables>
                     </configuration>
                 </plugin>
