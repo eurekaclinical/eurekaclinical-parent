@@ -93,5 +93,7 @@ The Eureka! Clinical project releases its artifacts to Maven Central. If you are
 </profile>
 ```
 
+To release a project, in the project's root directory, execute `mvn release:prepare` followed by `mvn release:perform`. You can inspect the artifact in the [Releases staging repository](https://oss.sonatype.org/service/local/staging/deploy/maven2/) (requires login). After you are satisfied that the artifact is correct, execute `mvn nexus-staging:release` to release it.
+
 ## Getting help
 Feel free to contact us at help@eurekaclinical.org.
