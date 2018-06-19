@@ -13,9 +13,7 @@ It is the parent pom used by all projects in the eurekaclinical organization. It
 * default plugin dependencies
 * setup to use Maven Central
 
-## Version history
-
-### Version 3
+## Version 3
 We switched from the tomcat7-maven-plugin to cargo-maven2-plugin for running Eureka! 
 Clinical microservices in an embedded tomcat. See below for details on how to
 configure it in your maven projects.
@@ -25,10 +23,10 @@ property to `false`. This causes the Maven release plugin to publish an artifact
 Central's staging repository, where it can be inspected prior to release. Actually 
 releasing an artifact now requires an extra step.
 
-### Version 2
+## Version 2
 Updates artifact versions.
 
-### Version 1
+## Version 1
 
 ## Specifying this pom as a parent
 ```
