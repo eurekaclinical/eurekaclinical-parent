@@ -16,9 +16,14 @@ It is the parent pom used by all projects in the eurekaclinical organization. It
 ## Version history
 
 ### Version 3
-Switch from the tomcat7-maven-plugin to cargo-maven2-plugin for running Eureka! 
+We switched from the tomcat7-maven-plugin to cargo-maven2-plugin for running Eureka! 
 Clinical microservices in an embedded tomcat. See below for details on how to
 configure it in your maven projects.
+
+We also changed the default setting of the Nexus release plugin's `autoReleaseAfterClose`
+property to `false`. This causes the Maven release plugin to publish an artifact to Maven 
+Central's staging repository, where it can be inspected prior to release. Actually 
+releasing an artifact now requires an extra step.
 
 ### Version 2
 Updates artifact versions.
