@@ -27,6 +27,7 @@ releasing an artifact now requires an extra step.
 Updates artifact versions.
 
 ## Version 1
+Initial release.
 
 ## Specifying this pom as a parent
 ```
