@@ -68,7 +68,6 @@
             <layout>default</layout>
         </repository>
     </repositories>
-        
     <pluginRepositories>
         <pluginRepository>
             <id>java.net-Public</id>
