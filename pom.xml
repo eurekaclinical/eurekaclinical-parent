@@ -68,6 +68,7 @@
             <layout>default</layout>
         </repository>
     </repositories>
+        
     <pluginRepositories>
         <pluginRepository>
             <id>java.net-Public</id>
@@ -416,6 +417,18 @@
                             </rules>    
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>enforce-dependencies</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+             				 <rules>
+                				<dependencyConvergence/>
+              				 </rules>
+           		   	    </configuration>
+                     </execution>
                 </executions>
             </plugin>
             <plugin>
