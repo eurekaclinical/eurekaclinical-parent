@@ -36,7 +36,7 @@
         <connection>scm:git:https://github.com/nityanandareddy/eurekaclinical-parent.git</connection>
         <developerConnection>scm:git:https://github.com/nityanandareddy/eurekaclinical-parent.git</developerConnection>
         <url>https://github.com/nityanandareddy/eurekaclinical-parent.git</url>
-        <tag>HEAD</tag>
+        <tag>eurekaclinical-parent-4-Alpha-1</tag>
     </scm>
     
     <!-- Both repositories are password protected for deploys. -->
