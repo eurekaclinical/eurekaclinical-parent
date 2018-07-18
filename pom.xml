@@ -3,12 +3,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eurekaclinical</groupId>
     <artifactId>eurekaclinical-parent</artifactId>
-    <version>4-Alpha-2-SNAPSHOT</version>
+    <version>4-Alpha-1</version>
     <packaging>pom</packaging>
     <name>Eureka! Clinical Parent</name>
     <description>Parent pom.xml for all Eureka! Clinical projects.</description>
     <inceptionYear>2015</inceptionYear>
-    <url>https://github.com/nityanandareddy/eurekaclinical-parent.git</url>
+    <url>https://github.com/eurekaclinical/eurekaclinical-parent.git</url>
     
     <licenses>
         <license>
@@ -33,10 +33,10 @@
     </organization>
     
     <scm>
-        <connection>scm:git:https://github.com/nityanandareddy/eurekaclinical-parent.git</connection>
-        <developerConnection>scm:git:https://github.com/nityanandareddy/eurekaclinical-parent.git</developerConnection>
-        <url>https://github.com/nityanandareddy/eurekaclinical-parent.git</url>
-        <tag>eurekaclinical-parent-4-Alpha-1</tag>
+        <connection>scm:git:https://github.com/eurekaclinical/eurekaclinical-parent.git</connection>
+        <developerConnection>scm:git:https://github.com/eurekaclinical/eurekaclinical-parent.git</developerConnection>
+        <url>https://github.com/eurekaclinical/eurekaclinical-parent.git</url>
+        <tag>HEAD</tag>
     </scm>
     
     <!-- Both repositories are password protected for deploys. -->
@@ -424,7 +424,7 @@
                         </goals>
                         <configuration>
              				 <rules>
-                				<dependencyConvergence />
+                				<dependencyConvergence/>
               				 </rules>
            		   	    </configuration>
                      </execution>
