@@ -416,6 +416,18 @@
                             </rules>    
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>enforce-dependencies</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>enforce</goal>
+                        </goals>
+                        <configuration>
+             				 <rules>
+                				<dependencyConvergence/>
+              				 </rules>
+           		   	    </configuration>
+                     </execution>
                 </executions>
             </plugin>
             <plugin>
