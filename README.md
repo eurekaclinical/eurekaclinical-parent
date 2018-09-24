@@ -13,6 +13,10 @@ It is the parent pom used by all projects in the eurekaclinical organization. It
 * default plugin dependencies
 * setup to use Maven Central
 
+## Version 4
+* By default, we check for version conflicts between dependencies and
+  fail the build if any are found.
+
 ## Version 3
 We switched from the tomcat7-maven-plugin to cargo-maven2-plugin for running Eureka! 
 Clinical microservices in an embedded tomcat. See below for details on how to
