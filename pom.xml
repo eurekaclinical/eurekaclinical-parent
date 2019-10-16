@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eurekaclinical</groupId>
     <artifactId>eurekaclinical-parent</artifactId>
-    <version>4-Alpha-5-SNAPSHOT</version>
+    <version>4-Alpha-4-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Eureka! Clinical Parent</name>
     <description>Parent pom.xml for all Eureka! Clinical projects.</description>
@@ -344,7 +344,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>eurekaclinical-int</serverId>
-                    <nexusUrl>https://maven-int.bmi.emory.edu/nexus/</nexusUrl>
+                    <nexusUrl>https://maven-int.bmi.emory.edu/</nexusUrl>
                     <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
             </plugin>
