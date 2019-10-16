@@ -343,8 +343,8 @@
                 <version>1.6.6</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <serverId>eurekaclinical-int</serverId>
+                    <nexusUrl>https://maven-int.bmi.emory.edu/</nexusUrl>
                     <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
             </plugin>
