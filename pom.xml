@@ -42,11 +42,11 @@
     <!-- Both repositories are password protected for deploys. -->
     <distributionManagement>
         <snapshotRepository>
-            <id>ossrh</id>
+            <id>eurekaclinical-int</id>
             <url>https://maven-int.bmi.emory.edu/nexus/repository/eurekaclinical-parent/</url>
         </snapshotRepository>
         <repository>
-            <id>ossrh</id>
+            <id>eurekaclinical-int</id>
             <url>https://maven-int.bmi.emory.edu/nexus/repository/eurekaclinical-parent/</url>
         </repository>
     </distributionManagement>
