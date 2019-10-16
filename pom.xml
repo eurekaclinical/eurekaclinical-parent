@@ -344,7 +344,7 @@
                 <extensions>true</extensions>
                 <configuration>
                     <serverId>eurekaclinical-int</serverId>
-                    <nexusUrl>https://maven-int.bmi.emory.edu/</nexusUrl>
+                    <nexusUrl>https://maven-int.bmi.emory.edu/nexus/</nexusUrl>
                     <autoReleaseAfterClose>false</autoReleaseAfterClose>
                 </configuration>
             </plugin>
