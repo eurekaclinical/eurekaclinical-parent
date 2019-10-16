@@ -43,11 +43,11 @@
     <distributionManagement>
         <snapshotRepository>
             <id>eurekaclinical-int</id>
-            <url>https://maven-int.bmi.emory.edu/nexus/repository/eurekaclinical-parent/</url>
+            <url>https://maven-int.bmi.emory.edu/nexus/repository/eurekaclinical-int/</url>
         </snapshotRepository>
         <repository>
             <id>eurekaclinical-int</id>
-            <url>https://maven-int.bmi.emory.edu/nexus/repository/eurekaclinical-parent/</url>
+            <url>https://maven-int.bmi.emory.edu/nexus/repository/eurekaclinical-int/</url>
         </repository>
     </distributionManagement>
     <repositories>
