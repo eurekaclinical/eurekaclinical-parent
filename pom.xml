@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eurekaclinical</groupId>
     <artifactId>eurekaclinical-parent</artifactId>
-    <version>4-Alpha-2-SNAPSHOT</version>
+    <version>4-Alpha-8-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Eureka! Clinical Parent</name>
     <description>Parent pom.xml for all Eureka! Clinical projects.</description>
@@ -40,16 +40,27 @@
     </scm>
     
     <!-- Both repositories are password protected for deploys. -->
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
+		<!-- For Internal Maven Release maven-int.bmi.emory.edu -->
+		<!--     <distributionManagement> -->
+		<!--         <snapshotRepository> -->
+		<!--             <id>eurekaclinical-int</id> -->
+		<!--             <url>https://maven-int.bmi.emory.edu/nexus/repository/eurekaclinical-int/</url> -->
+		<!--         </snapshotRepository> -->
+		<!--         <repository> -->
+		<!--             <id>eurekaclinical-int</id> -->
+		<!--             <url>https://maven-int.bmi.emory.edu/nexus/repository/eurekaclinical-int/</url> -->
+		<!--         </repository> -->
+		<!--     </distributionManagement> -->
+	<distributionManagement>
+		<snapshotRepository>
+		  <id>ossrh</id>
+		  <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+		  <id>ossrh</id>
+		  <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>	
     <repositories>
         <repository>
             <id>java.net-Public</id>
@@ -343,9 +354,7 @@
                 <version>1.6.6</version>
                 <extensions>true</extensions>
                 <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                    <skipStaging>true</skipStaging>
                 </configuration>
             </plugin>
             <plugin>
