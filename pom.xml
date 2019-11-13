@@ -21,7 +21,7 @@
     <properties>
         <eurekaclinical.stage>DEVELOPMENT</eurekaclinical.stage>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <liquibase-version>3.8.0</liquibase-version>
+        <liquibase-version>3.6.3</liquibase-version>
         <!-- Don't upgrade h2 yet. There is a bug causing ORDER BY to be
         ignored in SELECT queries with a WHERE clause. -->
         <h2-version>1.4.193</h2-version>                      
