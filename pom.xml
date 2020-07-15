@@ -253,9 +253,9 @@
                     <version>1.6.7</version>
                     <configuration>
                         <container>
-                            <containerId>tomcat7x</containerId>
+                            <containerId>tomcat9x</containerId>
                             <zipUrlInstaller>
-                                <url>http://repo1.maven.org/maven2/org/apache/tomcat/tomcat/7.0.53/tomcat-7.0.53.zip</url>
+                                <url>http://archive.apache.org/dist/tomcat/tomcat-9/v9.0.36/bin/apache-tomcat-9.0.36.zip</url>
                             </zipUrlInstaller>
                             <dependencies>
                                 <dependency>
